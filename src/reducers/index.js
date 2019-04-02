@@ -1,7 +1,7 @@
 // Root Reducer
 import { combineReducers } from "redux";
-// import columnReducer from "./columnReducer";
+import subscriberReducer from "./subscriberReducer";
 
 export default combineReducers({
-	// columns: columnReducer,
+	subscribers: subscriberReducer
 });
