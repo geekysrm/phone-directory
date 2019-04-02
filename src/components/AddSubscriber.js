@@ -8,14 +8,23 @@ import { addSubscriber } from "../actions/subscriberActions";
 class AddSubscriber extends Component {
 	state = {
 		name: "",
-		phone: ""
+		phone: "",
+		submitted: false,
+		error: ""
 	};
 
 	handleSubmit = e => {
 		e.preventDefault();
-		this.props.addSubscriber(this.state.name, this.state.phone);
-		this.setState({ name: "", phone: "" });
-		this.props.history.push("/");
+		this.setState({ submitted: true });
+
+		if (!this.state.name) this.setState({ error: "Please enter name" });
+		else if (!this.state.phone)
+			this.setState({ error: "Please enter valid phone number" });
+		else {
+			this.props.addSubscriber(this.state.name, this.state.phone);
+			this.setState({ name: "", phone: "" });
+			this.props.history.push("/");
+		}
 	};
 
 	onChange = e => {
@@ -30,15 +39,20 @@ class AddSubscriber extends Component {
 		return (
 			<div className="container w-50">
 				<form onSubmit={this.handleSubmit}>
+					{this.state.error && (
+						<div className="alert alert-danger" role="alert">
+							{this.state.error}
+						</div>
+					)}
 					<div className="form-group">
 						<label>Name</label>
 						<input
 							type="text"
 							name="name"
 							onChange={this.onChange}
-							className="form-control"
+							className={`form-control ${!this.state.name && "is-invalid"}`}
 							aria-describedby="emailHelp"
-							placeholder="Enter your name"
+							placeholder="Enter name"
 						/>
 					</div>
 					<div className="form-group">
