@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "phone": "^2.3.10",
     "react": "^16.8.6",
+    "react-bootstrap-intl-tel-input": "^1.0.1",
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
