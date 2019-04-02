@@ -1,22 +1,25 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { deleteSubscriber } from "../actions/subscriberActions";
 import "./ViewSubscribers.css";
 
 class ViewSubscribers extends Component {
-	handleClick = () => {
+	handleAddClick = () => {
 		this.props.history.push("/add");
+	};
+	handleDeleteClick = index => {
+		this.props.deleteSubscriber(index);
 	};
 
 	renderList = () => {};
 
 	render() {
 		const { allSubscribers } = this.props.subscribers;
-		console.log(this.props.subscribers.allSubscribers);
 		return (
 			<div>
 				<h1>Phone Directory</h1>
-				<button className="btn btn-success" onClick={this.handleClick}>
+				<button className="btn btn-success" onClick={this.handleAddClick}>
 					ADD
 				</button>
 				<div className="table-responsive">
@@ -38,7 +41,12 @@ class ViewSubscribers extends Component {
 												<td className="my-auto">{subscriber.name}</td>
 												<td>{subscriber.phone}</td>
 												<td>
-													<button className="btn btn-danger">DELETE</button>
+													<button
+														className="btn btn-danger"
+														onClick={() => this.handleDeleteClick(index)}
+													>
+														DELETE
+													</button>
 												</td>
 											</tr>
 										);
@@ -60,5 +68,5 @@ const mapStateToProps = state => {
 
 export default connect(
 	mapStateToProps,
-	{}
+	{ deleteSubscriber }
 )(ViewSubscribers);

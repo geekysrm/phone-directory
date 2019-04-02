@@ -1,4 +1,4 @@
-import { ADD_SUBSCRIBER } from "../actions/types";
+import { ADD_SUBSCRIBER, DELETE_SUBSCRIBER } from "../actions/types";
 
 const initialState = {
   allSubscribers: []
@@ -11,6 +11,13 @@ export default function(state = initialState, action) {
         ...state,
         allSubscribers: [...state.allSubscribers, action.payload]
       };
+    case DELETE_SUBSCRIBER:
+      return {
+        allSubscribers: state.allSubscribers.filter(
+          (_, index) => index !== action.payload.index
+        )
+      };
+
     default:
       return state;
   }

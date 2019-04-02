@@ -1,4 +1,4 @@
-import { ADD_SUBSCRIBER } from "./types";
+import { ADD_SUBSCRIBER, DELETE_SUBSCRIBER } from "./types";
 
 export const addSubscriber = (name, phone) => {
 	return {
@@ -6,6 +6,15 @@ export const addSubscriber = (name, phone) => {
 		payload: {
 			name,
 			phone
+		}
+	};
+};
+
+export const deleteSubscriber = index => {
+	return {
+		type: DELETE_SUBSCRIBER,
+		payload: {
+			index
 		}
 	};
 };
