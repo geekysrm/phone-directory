@@ -57,7 +57,6 @@ class AddSubscriber extends Component {
 							name="name"
 							onChange={this.onChange}
 							className={`form-control ${!this.state.name && "is-invalid"}`}
-							aria-describedby="emailHelp"
 							placeholder="Enter name"
 						/>
 					</div>
