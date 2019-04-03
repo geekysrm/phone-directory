@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import AddSubscriber from "./components/AddSubscriber";
 import ViewSubscribers from "./components/ViewSubscribers";
 
@@ -18,7 +19,7 @@ class App extends Component {
 						<Header />
 						<Route exact path="/" component={ViewSubscribers} />
 						<Route exact path="/add" component={AddSubscriber} />
-						{/*<Footer />*/}
+						<Footer />
 					</div>
 				</Router>
 			</Provider>
