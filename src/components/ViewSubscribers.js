@@ -51,7 +51,7 @@ class ViewSubscribers extends Component {
 					{filteredPeople.length > 0 ? (
 						filteredPeople.map((subscriber, index) => {
 							return (
-								<>
+								<React.Fragment key={index}>
 									<table className="table table-striped table-borderless">
 										<thead>
 											<tr>
@@ -77,7 +77,7 @@ class ViewSubscribers extends Component {
 											</tr>
 										</tbody>
 									</table>
-								</>
+								</React.Fragment>
 							);
 						})
 					) : (

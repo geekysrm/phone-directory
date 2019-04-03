@@ -21,3 +21,11 @@ td,
 th {
 	color: #3b3336;
 }
+
+th {
+	font-size: 18px;
+}
+
+td {
+	font-size: 15px;
+}
