@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import { deleteSubscriber } from "../actions/subscriberActions";
 import "./ViewSubscribers.css";
 
 class ViewSubscribers extends Component {
-
 	handleDeleteClick = index => {
 		this.props.deleteSubscriber(index);
 	};
@@ -19,10 +18,8 @@ class ViewSubscribers extends Component {
 			<div>
 				<h1>Phone Directory</h1>
 				<Link to="/add" className="btn btn-success">
-          ADD
-        </Link>
 					ADD
-				</button>
+				</Link>
 				<div className="table-responsive">
 					<table className="table table-striped table-borderless">
 						<thead>
