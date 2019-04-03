@@ -2,7 +2,7 @@
 
 A mini phone directory which has features to add, search, delete and view subscribers.
 
-### Live here:
+### Live here: https://phone-directory-react.netlify.com/
 
 ## Technologies used
 
