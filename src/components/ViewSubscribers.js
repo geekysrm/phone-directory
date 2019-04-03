@@ -32,20 +32,22 @@ class ViewSubscribers extends Component {
 					ADD
 				</Link>
 				<div className="table-responsive">
-					<div className="search form-group mt-1">
-						<input
-							type="text"
-							className="form-control"
-							value={this.state.search}
-							onChange={this.updateSearch}
-							placeholder="Search name"
-						/>
-						<img
-							className="search-icon"
-							alt="search-icon"
-							src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png"
-						/>
-					</div>
+					{allSubscribers.length > 0 && (
+						<div className="search form-group mt-1">
+							<input
+								type="text"
+								className="form-control"
+								value={this.state.search}
+								onChange={this.updateSearch}
+								placeholder="Search name"
+							/>
+							<img
+								className="search-icon"
+								alt="search-icon"
+								src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png"
+							/>
+						</div>
+					)}
 					{filteredPeople.length > 0 ? (
 						filteredPeople.map((subscriber, index) => {
 							return (
