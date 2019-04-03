@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 
 import { deleteSubscriber } from "../actions/subscriberActions";
 import "./ViewSubscribers.css";
 
 class ViewSubscribers extends Component {
-	handleAddClick = () => {
-		this.props.history.push("/add");
-	};
+
 	handleDeleteClick = index => {
 		this.props.deleteSubscriber(index);
 	};
@@ -19,7 +18,9 @@ class ViewSubscribers extends Component {
 		return (
 			<div>
 				<h1>Phone Directory</h1>
-				<button className="btn btn-success" onClick={this.handleAddClick}>
+				<Link to="/add" className="btn btn-success">
+          ADD
+        </Link>
 					ADD
 				</button>
 				<div className="table-responsive">
