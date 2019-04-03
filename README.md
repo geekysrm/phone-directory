@@ -1,13 +1,14 @@
 # Phone Directory
 
-A mini phone directory which has features to add, search, delete and view subscribers.
+A mini phone directory which has features to _add, search, delete and view subscribers_.
 
 ### Live here: https://phone-directory-react.netlify.com/
 
 ## Technologies used
 
 - [React.JS](https://reactjs.org/) -Frontend library used in the project.
-- [Redux](https://redux.js.org/) - Used in addition to React.JS for state management
+- [Redux](https://redux.js.org/) - Used in addition to React.JS for state management.
+- [Bootstrap](http://getbootstrap.com/) - Used for styling purposes.
 
 ## Features
 
