@@ -62,7 +62,7 @@ class AddSubscriber extends Component {
 						/>
 					</div>
 					<div className="form-group">
-						<label>Phone Number</label>
+						<label>Phone</label>
 						<IntlTelInput
 							preferredCountries={["IN"]}
 							defaultCountry={"IN"}
@@ -75,6 +75,16 @@ class AddSubscriber extends Component {
 						ADD
 					</button>
 				</form>
+				<hr />
+				<div>
+					<h2>Subscriber to be added</h2>
+					<p>
+						<b>Name:</b> {this.state.name}
+					</p>
+					<p>
+						<b>Phone:</b> {this.state.phone}
+					</p>
+				</div>
 			</div>
 		);
 	}
