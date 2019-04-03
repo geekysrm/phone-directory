@@ -49,19 +49,19 @@ class ViewSubscribers extends Component {
 						</div>
 					)}
 					{filteredPeople.length > 0 ? (
-						filteredPeople.map((subscriber, index) => {
-							return (
-								<React.Fragment key={index}>
-									<table className="table table-striped table-borderless">
-										<thead>
-											<tr>
-												<th>#</th>
-												<th>NAME</th>
-												<th>PHONE</th>
-												<th />
-											</tr>
-										</thead>
-										<tbody>
+						<React.Fragment>
+							<table className="table table-striped table-borderless">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>NAME</th>
+										<th>PHONE</th>
+										<th />
+									</tr>
+								</thead>
+								<tbody>
+									{filteredPeople.map((subscriber, index) => {
+										return (
 											<tr key={index}>
 												<th scope="row">{Number(index) + 1}</th>
 												<td className="my-auto">{subscriber.name}</td>
@@ -75,11 +75,11 @@ class ViewSubscribers extends Component {
 													</button>
 												</td>
 											</tr>
-										</tbody>
-									</table>
-								</React.Fragment>
-							);
-						})
+										);
+									})}
+								</tbody>
+							</table>
+						</React.Fragment>
 					) : (
 						<div className="jumbotron jumbotron-fluid mt-3">
 							<div className="container">
