@@ -2,3 +2,12 @@
 	background-color: #f4f4f4;
 	border-color: #e6e5e5;
 }
+
+.btn-outline-secondary {
+	border-color: #f4f4f4;
+}
+
+.remove-token-container {
+	top: 7px;
+	color: #d9534f;
+}

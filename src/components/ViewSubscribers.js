@@ -66,7 +66,7 @@ class ViewSubscribers extends Component {
 												<th scope="row">{Number(index) + 1}</th>
 												<td className="my-auto">{subscriber.name}</td>
 												<td>{subscriber.phone}</td>
-												<td>
+												<td className="text-center">
 													<button
 														className="btn btn-danger"
 														onClick={() => this.handleDeleteClick(index)}
