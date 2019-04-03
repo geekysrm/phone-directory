@@ -5,6 +5,7 @@ import phone from "phone";
 import { Link } from "react-router-dom";
 
 import { addSubscriber } from "../actions/subscriberActions";
+import "./AddSubscriber.css";
 
 class AddSubscriber extends Component {
 	state = {
@@ -38,7 +39,7 @@ class AddSubscriber extends Component {
 
 	render() {
 		return (
-			<div className="container w-50">
+			<div className="container w-100">
 				<Link to="/" className="btn btn-secondary w-100">
 					BACK
 				</Link>
@@ -70,7 +71,7 @@ class AddSubscriber extends Component {
 							inputClassName={!this.state.phone && " is-invalid"}
 						/>
 					</div>
-					<button type="submit" className="btn btn-success">
+					<button type="submit" className="btn btn-success w-100">
 						ADD
 					</button>
 				</form>

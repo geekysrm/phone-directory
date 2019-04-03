@@ -13,9 +13,8 @@ class ViewSubscribers extends Component {
 	render() {
 		const { allSubscribers } = this.props.subscribers;
 		return (
-			<div>
-				<h1>Phone Directory</h1>
-				<Link to="/add" className="btn btn-success">
+			<div className="container">
+				<Link to="/add" className="btn btn-success w-100">
 					ADD
 				</Link>
 				<div className="table-responsive">
@@ -50,7 +49,11 @@ class ViewSubscribers extends Component {
 							);
 						})
 					) : (
-						<div>No subscribers to show</div>
+						<div className="jumbotron jumbotron-fluid mt-3">
+							<div className="container">
+								<h2 className="text-center">You have no subscribers to show</h2>
+							</div>
+						</div>
 					)}
 				</div>
 			</div>
