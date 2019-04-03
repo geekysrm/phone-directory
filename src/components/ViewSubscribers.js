@@ -44,7 +44,7 @@ class ViewSubscribers extends Component {
 							<img
 								className="search-icon"
 								alt="search-icon"
-								src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png"
+								src="https://i.imgur.com/bhhCpES.png"
 							/>
 						</div>
 					)}

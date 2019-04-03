@@ -24,7 +24,7 @@ class AddSubscriber extends Component {
 			this.setState({ error: "Please enter valid phone number" });
 		else {
 			this.props.addSubscriber(this.state.name, this.state.phone);
-			this.setState({ name: "", phone: "" });
+			this.setState({ name: "", phone: "", error: "" });
 			this.props.history.push("/");
 		}
 	};
@@ -75,7 +75,7 @@ class AddSubscriber extends Component {
 					</button>
 				</form>
 				<hr />
-				<div>
+				<div className="subscriber-wrapper">
 					<h2>Subscriber to be added</h2>
 					<p>
 						<b>Name:</b> {this.state.name}
