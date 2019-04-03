@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 
+import Header from "./components/Header";
 import AddSubscriber from "./components/AddSubscriber";
 import ViewSubscribers from "./components/ViewSubscribers";
 
@@ -14,7 +15,7 @@ class App extends Component {
 			<Provider store={store}>
 				<Router>
 					<div className="App">
-						{/*<Navbar />*/}
+						<Header />
 						<Route exact path="/" component={ViewSubscribers} />
 						<Route exact path="/add" component={AddSubscriber} />
 						{/*<Footer />*/}

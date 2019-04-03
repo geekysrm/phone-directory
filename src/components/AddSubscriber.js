@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import IntlTelInput from "react-bootstrap-intl-tel-input";
 import phone from "phone";
+import { Link } from "react-router-dom";
 
 import { addSubscriber } from "../actions/subscriberActions";
 
@@ -38,6 +39,10 @@ class AddSubscriber extends Component {
 	render() {
 		return (
 			<div className="container w-50">
+				<Link to="/" className="btn btn-secondary w-100">
+					BACK
+				</Link>
+				<hr />
 				<form onSubmit={this.handleSubmit}>
 					{this.state.error && (
 						<div className="alert alert-danger" role="alert">
